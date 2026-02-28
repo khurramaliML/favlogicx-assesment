@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #EFF0EB;
+  --foreground: #000000;
+  --font-sf-compact: -apple-system, BlinkMacSystemFont, "SF Compact",
+    "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+}
+body {
+  background: var(--background);
+  color: #000 !important;
+  font-family: var(--font-sf-compact);
+}
+@layer components {
+  h1 {
+    @apply font-bold leading-[120%] text-[1.5rem]  lg:text-[1.98vw] 2xl:text-[2.375rem];
+  }
+  h2 {
+    @apply font-bold leading-[110%]  text-[2rem] lg:text-[1vw] 2xl:text-[1.5rem];
+  }
+  h3 {
+    @apply font-bold leading-[100%] text-[1.5rem] lg:text-[1.1vw] 2xl:text-[1.3rem];
+  }
+  h4 {
+    @apply font-[457] leading-[100%] text-[#222222] text-[1rem] lg:text-[0.9vw] 2xl:text-[1rem]
+  }
+  h5 {
+    @apply  font-medium text-[1rem] lg:text-[0.75vw] 2xl:text-[0.85rem];
+  }
+  h6 {
+    @apply  font-medium text-[0.9rem] lg:text-[0.6vw] 2xl:text-[0.7rem];
+  }
+  p,
+  li {
+    @apply font-medium leading-[150%] text-[0.8rem]  lg:text-[0.62vw] 2xl:text-[0.7rem];
+  }
+  .body1 {
+    @apply font-medium leading-[150%] text-[0.66rem] text-[#3F3C39] lg:text-[0.66vw] 2xl:text-[0.66rem];
+  }
+  .smallText {
+    @apply font-medium text-[0.85rem] lg:text-[0.85vw] 2xl:text-[0.85rem];
+  }
+}
+.roz-text {
+  font-family: "Rozinzo", sans-serif;
+  font-weight: 300;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+button{
+  cursor: pointer;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+.slow-spin {
+  animation: slowRotate 2s linear infinite;
+}
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
